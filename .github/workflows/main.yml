@@ -23,7 +23,9 @@ jobs:
       run: dotnet restore
 
     - name: Build
-      run: dotnet build --no-restore
+      run: |
+        "%MSBUILD_EXE_PATH%" /t:Build /p:Configuration=Release /p:Platform="Any CPU" "D:\vs proekts\Technics.csproj"
+
 
     - name: Run WPF application tests
       run: dotnet test --no-build --verbosity normal
