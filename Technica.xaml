@@ -1,0 +1,48 @@
+﻿<Window x:Class="Technics.Technica"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Technics"
+        mc:Ignorable="d"
+        Title="Technica" WindowState="Maximized" WindowStyle="None">
+    <Grid>
+        <DataGrid Loaded="tech_Loaded" Name="tech" d:ItemsSource="{d:SampleData ItemCount=5}" Height="475" VerticalAlignment="Top" SelectionChanged="tech_SelectionChanged"/>
+        <TextBlock Height="20" TextWrapping="Wrap" Width="350" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="15,500,0,0" FontWeight="Bold"><Run Language="ru-ru" Text="Наименование продукта"/></TextBlock>
+        <TextBox Name="Name_Technic" HorizontalAlignment="Left" Height="50" Margin="15,521,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" FontSize="16"/>
+        <TextBlock Height="20" TextWrapping="Wrap" Width="350" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="390,500,0,0" FontWeight="Bold"><Run Language="ru-ru" Text="Инвентарный номер"/></TextBlock>
+        <TextBox Name="Inventory_Number_Technic" HorizontalAlignment="Left" Height="50" Margin="390,521,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" FontSize="16"/>
+        <TextBlock Height="20" TextWrapping="Wrap" Width="350" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="765,500,0,0" FontWeight="Bold"><Run Language="ru-ru" Text="Серийный номер"/></TextBlock>
+        <TextBox Name="Serial_Number_Technic" HorizontalAlignment="Left" Height="50" Margin="765,521,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" FontSize="16"/>
+        <TextBlock Height="20" TextWrapping="Wrap" Width="350" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="1140,500,0,0" FontWeight="Bold"><Run Language="ru-ru" Text="Введён в эксплуатацию"/></TextBlock>
+        <TextBox Name="Date_Of_Entry_Technic" HorizontalAlignment="Left" Height="50" Margin="1140,521,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" FontSize="16"/>
+        <TextBlock Height="20" TextWrapping="Wrap" Width="350" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="15,598,0,0" FontWeight="Bold"><Run Language="ru-ru" Text="Модель"/></TextBlock>
+        <ComboBox Name="Name_Model" HorizontalAlignment="Left" Height="50" Margin="15,620,0,0" VerticalAlignment="Top" Width="350"/>
+        <TextBlock Height="20" TextWrapping="Wrap" Width="350" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="390,598,0,0" FontWeight="Bold"><Run Language="ru-ru" Text="Группа"/></TextBlock>
+        <ComboBox Name="Name_Group" HorizontalAlignment="Left" Height="50" Margin="390,620,0,0" VerticalAlignment="Top" Width="350"/>
+        <TextBlock Height="20" TextWrapping="Wrap" Width="350" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="765,598,0,0" FontWeight="Bold"><Run Language="ru-ru" Text="Страна производителя"/></TextBlock>
+        <ComboBox Name="Country_Manufacturer" HorizontalAlignment="Left" Height="50" Margin="765,620,0,0" VerticalAlignment="Top" Width="350"/>
+        <TextBlock Height="20" TextWrapping="Wrap" Width="350" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="1140,598,0,0" FontWeight="Bold"><Run Language="ru-ru" Text="Стоимость"/></TextBlock>
+        <TextBox Name="Price_Technic" HorizontalAlignment="Left" Height="50" Margin="1140,620,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" FontSize="16"/>
+        <TextBlock Height="20" TextWrapping="Wrap" Width="535" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="15,698,0,0" FontWeight="Bold"><Run Language="ru-ru" Text="Территория"/></TextBlock>
+        <ComboBox Name="Address_Territory" HorizontalAlignment="Left" Height="50" Margin="15,720,0,0" VerticalAlignment="Top" Width="535"/>
+        <TextBlock Height="20" TextWrapping="Wrap" Width="350" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="578,698,0,0" FontWeight="Bold"><Run Language="ru-ru" Text="Номер помещения"/></TextBlock>
+        <ComboBox Name="Name_Room" HorizontalAlignment="Left" Height="50" Margin="578,720,0,0" VerticalAlignment="Top" Width="350"/>
+        <TextBlock Height="20" TextWrapping="Wrap" Width="535" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="955,698,0,0" FontWeight="Bold"><Run Language="ru-ru" Text="Отдел"/></TextBlock>
+        <ComboBox Name="Department_Room" HorizontalAlignment="Left" Height="50" Margin="955,720,0,0" VerticalAlignment="Top" Width="535"/>
+        <TextBlock Height="20" TextWrapping="Wrap" Width="350" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="15,798,0,0" FontWeight="Bold"><Run Language="ru-ru" Text="Состояние"/></TextBlock>
+        <ComboBox Name="Status_Condition" HorizontalAlignment="Left" Height="50" Margin="15,820,0,0" VerticalAlignment="Top" Width="350"/>
+        <TextBlock Height="20" TextWrapping="Wrap" Width="350" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="390,798,0,0" FontWeight="Bold"><Run Language="ru-ru" Text="Дата ремонта"/></TextBlock>
+        <TextBox Name="Repair_Date_Condition" HorizontalAlignment="Left" Height="50" Margin="390,820,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" FontSize="16"/>
+        <TextBlock Height="20" TextWrapping="Wrap" Width="350" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="765,798,0,0" FontWeight="Bold"><Run Language="ru-ru" Text="Списание"/></TextBlock>
+        <ComboBox Name="Status_Write_downs" HorizontalAlignment="Left" Height="50" Margin="765,820,0,0" VerticalAlignment="Top" Width="350"/>
+        <TextBlock Height="20" TextWrapping="Wrap" Width="350" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="1140,798,0,0" FontWeight="Bold"><Run Language="ru-ru" Text="Дата списания"/></TextBlock>
+        <TextBox Name="Date_Write_downs" HorizontalAlignment="Left" Height="50" Margin="1140,820,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" FontSize="16"/>
+        <TextBlock Height="20" TextWrapping="Wrap" Width="200" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="15,898,0,0" FontWeight="Bold"><Run Language="ru-ru" Text="Мат. Отв. лицо"/></TextBlock>
+        <ComboBox Name="FIO" HorizontalAlignment="Left" Height="50" Margin="10,384,0,0" VerticalAlignment="Top" Width="600"/>
+        <Button Content="Добавить" HorizontalAlignment="Left" Margin="745,384,0,0" Width="150" FontSize="24" Click="Button_Click" FontWeight="Bold" Height="50" VerticalAlignment="Top"/>
+        <Button Content="Изменить" HorizontalAlignment="Left" Margin="900,349,0,0" Width="150" FontSize="24" Click="Button_Click_1" FontWeight="Bold" Height="50" VerticalAlignment="Top"/>
+        <Button Content="Удалить" HorizontalAlignment="Left" Margin="1020,409,0,0" Width="150" FontSize="24" Click="Button_Click_2" FontWeight="Bold" Height="50" VerticalAlignment="Top"/>
+        <Button Content="Назад" HorizontalAlignment="Left" Margin="1240,425,0,0" Width="150" FontSize="24" Click="Button_Click_3" FontWeight="Bold" Height="50" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

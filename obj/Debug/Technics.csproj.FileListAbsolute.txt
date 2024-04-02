@@ -1,0 +1,62 @@
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\Technics.csproj.AssemblyReference.cache
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\Administrator.g.cs
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\Authorization.g.cs
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\Informacia.g.cs
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\MainWindow.g.cs
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\Polzovatel.g.cs
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\Registration.g.cs
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\Technica.g.cs
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\App.g.cs
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\Technics_MarkupCompile.cache
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\Technics_MarkupCompile.lref
+D:\Users\Екатерина\source\repos\Technics\Technics\bin\Debug\Technics.exe.config
+D:\Users\Екатерина\source\repos\Technics\Technics\bin\Debug\Technics.exe
+D:\Users\Екатерина\source\repos\Technics\Technics\bin\Debug\Technics.pdb
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\Administrator.baml
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\Authorization.baml
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\Informacia.baml
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\MainWindow.baml
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\Polzovatel.baml
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\Registration.baml
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\Technica.baml
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\Technics.g.resources
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\Technics.Properties.Resources.resources
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\Technics.csproj.GenerateResource.cache
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\Technics.csproj.CoreCompileInputs.cache
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\Technics.exe
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\Technics.pdb
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\MatOtv.g.cs
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\MatOtv.baml
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\Tech.g.cs
+D:\Users\Екатерина\source\repos\Technics\Technics\obj\Debug\Tech.baml
+D:\vs proekts\Technics\Technics\bin\Debug\Technics.exe.config
+D:\vs proekts\Technics\Technics\bin\Debug\Technics.exe
+D:\vs proekts\Technics\Technics\bin\Debug\Technics.pdb
+D:\vs proekts\Technics\Technics\obj\Debug\Technics.csproj.AssemblyReference.cache
+D:\vs proekts\Technics\Technics\obj\Debug\Administrator.g.cs
+D:\vs proekts\Technics\Technics\obj\Debug\Authorization.g.cs
+D:\vs proekts\Technics\Technics\obj\Debug\Informacia.g.cs
+D:\vs proekts\Technics\Technics\obj\Debug\MainWindow.g.cs
+D:\vs proekts\Technics\Technics\obj\Debug\MatOtv.g.cs
+D:\vs proekts\Technics\Technics\obj\Debug\Polzovatel.g.cs
+D:\vs proekts\Technics\Technics\obj\Debug\Registration.g.cs
+D:\vs proekts\Technics\Technics\obj\Debug\Tech.g.cs
+D:\vs proekts\Technics\Technics\obj\Debug\Technica.g.cs
+D:\vs proekts\Technics\Technics\obj\Debug\App.g.cs
+D:\vs proekts\Technics\Technics\obj\Debug\Technics_MarkupCompile.cache
+D:\vs proekts\Technics\Technics\obj\Debug\Technics_MarkupCompile.lref
+D:\vs proekts\Technics\Technics\obj\Debug\Administrator.baml
+D:\vs proekts\Technics\Technics\obj\Debug\Authorization.baml
+D:\vs proekts\Technics\Technics\obj\Debug\Informacia.baml
+D:\vs proekts\Technics\Technics\obj\Debug\MainWindow.baml
+D:\vs proekts\Technics\Technics\obj\Debug\MatOtv.baml
+D:\vs proekts\Technics\Technics\obj\Debug\Polzovatel.baml
+D:\vs proekts\Technics\Technics\obj\Debug\Registration.baml
+D:\vs proekts\Technics\Technics\obj\Debug\Tech.baml
+D:\vs proekts\Technics\Technics\obj\Debug\Technica.baml
+D:\vs proekts\Technics\Technics\obj\Debug\Technics.g.resources
+D:\vs proekts\Technics\Technics\obj\Debug\Technics.Properties.Resources.resources
+D:\vs proekts\Technics\Technics\obj\Debug\Technics.csproj.GenerateResource.cache
+D:\vs proekts\Technics\Technics\obj\Debug\Technics.csproj.CoreCompileInputs.cache
+D:\vs proekts\Technics\Technics\obj\Debug\Technics.exe
+D:\vs proekts\Technics\Technics\obj\Debug\Technics.pdb

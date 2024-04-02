@@ -1,0 +1,63 @@
+﻿<Window x:Class="Technics.Polzovatel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Technics"
+        mc:Ignorable="d"
+        Title="Polzovatel" WindowState="Maximized" WindowStyle="None">
+    <Grid>
+        <Button Content="Выйти" Height="25" Margin="25,20,0,0" VerticalAlignment="Top" Click="Button_Click" FontSize="16" HorizontalAlignment="Left" Width="60" FontWeight="Bold"/>
+        <Button Content="ВОПРОС" Height="25" Margin="1046,20,0,0" VerticalAlignment="Top" Click="Button_Click_1" FontSize="16" HorizontalAlignment="Left" Width="150" FontWeight="Bold"/>
+        <Button Content="Завершить работу" Height="25" Margin="1290,20,0,0" VerticalAlignment="Top" Click="Button_Click_2" FontSize="16" HorizontalAlignment="Left" Width="150" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="15" Margin="25,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontWeight="Bold"><Run Language="ru-ru" Text="Поиск по инвентарному номеру"/></TextBlock>
+        <TextBox Name="poisk" HorizontalAlignment="Left" Height="25" Margin="25,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="450" TextBlock.FontWeight="Bold"/>
+        <Button HorizontalAlignment="Left" Height="25" Margin="474,75,0,0" VerticalAlignment="Top" Width="35" Click="Button_Click_3" FontSize="16" BorderBrush="#FFABADB3">
+            <Image Source="/Image4.png" Stretch="Fill" Height="20" Width="30"/>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Height="15" Margin="540,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" FontWeight="Bold"><Run Text="Территория расположения"/><Run Language="ru-ru" Text=" (факт.)"/></TextBlock>
+        <ComboBox Name="sort_ter" HorizontalAlignment="Left" Height="25" Margin="535,75,0,0" VerticalAlignment="Top" Width="270" SelectionChanged="sort_ter_SelectionChanged" FontWeight="Bold"/>
+        <TextBlock Height="15" Margin="830,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="76" FontWeight="Bold"><Run Text="Год ввода от:"/></TextBlock>
+        <TextBox Name="ott" Height="25" Margin="830,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" TextBlock.FontWeight="Bold"/>
+        <TextBlock Height="15" Margin="910,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="77" FontWeight="Bold"><Run Text="Год ввода до:"/></TextBlock>
+        <TextBox Name="doo" Height="25" Margin="910,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" TextBlock.FontWeight="Bold"/>
+        <Button Content="Фильтрация" Height="25" Margin="990,75,0,0" VerticalAlignment="Top" FontSize="16" Click="Button_Click_4" HorizontalAlignment="Left" Width="100" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="15" Margin="1115,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontWeight="Bold"><Run Language="ru-ru" Text="Сортировка"/></TextBlock>
+        <ComboBox Name="sort" HorizontalAlignment="Left" Height="25" Margin="1115,75,0,0" VerticalAlignment="Top" Width="180" SelectionChanged="ComboBox_SelectionChanged" FontWeight="Bold">
+            <ComboBoxItem Content="Списан"/>
+            <ComboBoxItem Content="Сломан"/>
+            <ComboBoxItem Content="По возрастанию года ввода"/>
+            <ComboBoxItem Content="По убыванию года ввода"/>
+            <ComboBoxItem Content="Сброс"/>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Height="16" Margin="1315,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" FontWeight="Bold"><Run Language="ru-ru" Text="Помещение"/></TextBlock>
+        <TextBox Name="pom" Height="24" Margin="1315,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" TextChanged="pom_TextChanged" TextBlock.FontWeight="Bold"/>
+        <ListView  Name="listviewTechnics" MouseDoubleClick="ListView_MouseDoubleClick"  
+            Margin="25,115,0,0" d:ItemsSource="{d:SampleData ItemCount=1}" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Name}" 
+                        Header="Наименование продукта"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Inventory_Number}" 
+                        Header="Инвентарный номер"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Serial_Number}" 
+                        Header="Серийный номер"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Date_Of_Entry}" 
+                        Header="Дата ввода"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding FIO}" 
+                        Header="Мат. отв."/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Territory}" 
+                        Header="Территория"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Room}" 
+                        Header="Помещение"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Price}" 
+                        Header="Стоимость"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Write_downs}" 
+                        Header="Списание"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Condition}" 
+                        Header="Состояние"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

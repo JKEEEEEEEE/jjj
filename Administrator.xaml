@@ -1,0 +1,107 @@
+﻿<Window x:Class="Technics.Administrator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Technics"
+        mc:Ignorable="d"
+        Title="Administrator" WindowState="Maximized" WindowStyle="None">
+    <Grid>
+        <TabControl>
+            <TabItem Loaded="TabItem_Loaded" Header="Роли" FontWeight="Bold">
+                <Grid>
+                    <DataGrid Loaded="role_Loaded" Name="role" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0,109" SelectionChanged="role_SelectionChanged"/>
+                    <ComboBox Name="Name_Role"  HorizontalAlignment="Left" Margin="15,0,0,56" Width="290" Height="40" VerticalAlignment="Bottom"/>
+                    <Button Content="Изменить роль" HorizontalAlignment="Left" Margin="333,0,0,56" Width="200" Click="Button_Click" FontSize="24" Height="40" VerticalAlignment="Bottom"/>
+                    <Button Content="Техника" HorizontalAlignment="Right" Margin="0,0,193,13" Width="110" Click="Button_Click_26" FontSize="24" Height="40" VerticalAlignment="Bottom"/>
+                    <Button Content="Выход" HorizontalAlignment="Right" Margin="0,0,15,13" Width="110" Click="Button_Click_1" FontSize="24" Height="40" VerticalAlignment="Bottom"/>
+                </Grid>
+            </TabItem>
+            <TabItem Loaded="TabItem_Loaded_1" Header="CRUD" FontWeight="Bold" Height="20" VerticalAlignment="Bottom">
+                <TabControl>
+                    <TabItem Loaded="TabItem_Loaded_2" Header="Территория" FontWeight="Bold" Height="20" VerticalAlignment="Bottom">
+                        <Grid>
+                            <TextBlock Height="30" TextWrapping="Wrap" Width="125" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20"><Run Language="ru-ru" Text="Территории"/></TextBlock>
+                            <DataGrid Loaded="crud_Loaded" Name="crud" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="crud_SelectionChanged" Height="600" VerticalAlignment="Top" HorizontalAlignment="Left" Width="600" Margin="0,30,0,0"/>
+                            <TextBlock Height="20" TextWrapping="Wrap" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="15,633,0,0"><Run Language="ru-ru" Text="Адрес"/></TextBlock>
+                            <TextBox Name="Address_Territory" HorizontalAlignment="Left" Height="34" Margin="15,655,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="570" FontSize="16"/>
+                            <Button Content="Добавить" HorizontalAlignment="Left" Margin="15,705,0,0" VerticalAlignment="Top" Height="35" Width="180" FontSize="24" Click="Button_Click_2"/>
+                            <Button Content="Изменить" HorizontalAlignment="Left" Margin="210,705,0,0" VerticalAlignment="Top" Height="35" Width="180" FontSize="24" Click="Button_Click_3"/>
+                            <Button Content="Удалить" HorizontalAlignment="Left" Margin="405,705,0,0" VerticalAlignment="Top" Height="35" Width="180" FontSize="24" Click="Button_Click_4"/>
+
+                            <TextBlock Height="30" TextWrapping="Wrap" Width="125" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20" Margin="630,0,0,0"><Run Language="ru-ru" Text="Помещения"/></TextBlock>
+                            <DataGrid Loaded="crud_Loaded_2" Name="crud_2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="630,30,0,0" SelectionChanged="crud_SelectionChanged_2" Height="600" VerticalAlignment="Top" HorizontalAlignment="Left" Width="600"/>
+                            <TextBlock Height="20" TextWrapping="Wrap" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="645,633,0,0"><Run Language="ru-ru" Text="Номер"/></TextBlock>
+                            <TextBox Name="Name_Room" HorizontalAlignment="Left" Height="36" Margin="645,655,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="570" FontSize="16"/>
+                            <TextBlock Height="20" TextWrapping="Wrap" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="645,690,0,0"><Run Language="ru-ru" Text="Отдел"/></TextBlock>
+                            <TextBox Name="Department_Room" HorizontalAlignment="Left" Height="35" Margin="645,715,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="570" FontSize="16"/>
+                            <Button Content="Добавить" HorizontalAlignment="Left" Margin="645,765,0,0" VerticalAlignment="Top" Height="35" Width="180" FontSize="24" Click="Button_Click_8"/>
+                            <Button Content="Изменить" HorizontalAlignment="Left" Margin="840,765,0,0" VerticalAlignment="Top" Height="35" Width="180" FontSize="24" Click="Button_Click_9"/>
+                            <Button Content="Удалить" HorizontalAlignment="Left" Margin="1035,765,0,0" VerticalAlignment="Top" Height="35" Width="180" FontSize="24" Click="Button_Click_10"/>
+                        </Grid>
+                    </TabItem>
+
+                    <TabItem Loaded="TabItem_Loaded_3" Header="Модель" FontWeight="Bold" Height="20" VerticalAlignment="Bottom">
+                        <Grid>
+                            <TextBlock Height="30" TextWrapping="Wrap" Width="160" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20"><Run Language="ru-ru" Text="Производители"/></TextBlock>
+                            <DataGrid Loaded="crud_Loaded_1" Name="crud_1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,30,0,0" SelectionChanged="crud_SelectionChanged_1" Height="600" VerticalAlignment="Top" HorizontalAlignment="Left" Width="450"/>
+                            <TextBlock Height="20" TextWrapping="Wrap" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="15,633,0,0"><Run Language="ru-ru" Text="Страна"/></TextBlock>
+                            <TextBox Name="Country_Manufacturer" HorizontalAlignment="Left" Height="34" Margin="15,653,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="420" FontSize="16"/>
+                            <Button Content="Добавить" HorizontalAlignment="Left" Margin="15,701,0,0" VerticalAlignment="Top" Height="35" Width="180" FontSize="24" Click="Button_Click_5"/>
+                            <Button Content="Изменить" HorizontalAlignment="Left" Margin="15,745,0,0" VerticalAlignment="Top" Height="35" Width="180" FontSize="24" Click="Button_Click_6"/>
+                            <Button Content="Удалить" HorizontalAlignment="Left" Margin="15,788,0,0" VerticalAlignment="Top" Height="35" Width="180" FontSize="24" Click="Button_Click_7"/>
+
+                            <TextBlock Height="30" TextWrapping="Wrap" Width="90" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20" Margin="480,0,0,0"><Run Language="ru-ru" Text="Модели"/></TextBlock>
+                            <DataGrid Loaded="crud_Loaded_3" Name="crud_3" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="crud_SelectionChanged_3" Height="600" VerticalAlignment="Top" HorizontalAlignment="Left" Width="450" Margin="480,30,0,0"/>
+                            <TextBlock Height="20" TextWrapping="Wrap" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="495,633,0,0"><Run Language="ru-ru" Text="Наименование"/></TextBlock>
+                            <TextBox Name="Name_Model" HorizontalAlignment="Left" Height="34" Margin="495,657,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="420" FontSize="16"/>
+                            <Button Content="Добавить" HorizontalAlignment="Left" Margin="495,705,0,0" VerticalAlignment="Top" Height="35" Width="180" FontSize="24" Click="Button_Click_11"/>
+                            <Button Content="Изменить" HorizontalAlignment="Left" Margin="495,750,0,0" VerticalAlignment="Top" Height="35" Width="180" FontSize="24" Click="Button_Click_12"/>
+                            <Button Content="Удалить" HorizontalAlignment="Left" Margin="495,793,0,0" VerticalAlignment="Top" Height="35" Width="180" FontSize="24" Click="Button_Click_13"/>
+
+                            <TextBlock Height="30" TextWrapping="Wrap" Width="82" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20" Margin="960,0,0,0"><Run Language="ru-ru" Text="Группы"/></TextBlock>
+                            <DataGrid Loaded="crud_Loaded_4" Name="crud_4" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="crud_SelectionChanged_4" Height="600" VerticalAlignment="Top" HorizontalAlignment="Left" Width="450" Margin="960,30,0,0"/>
+                            <TextBlock Height="21" TextWrapping="Wrap" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="975,633,0,0"><Run Language="ru-ru" Text="Наименование"/></TextBlock>
+                            <TextBox Name="Name_Group" HorizontalAlignment="Left" Height="34" Margin="975,657,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="420" FontSize="16"/>
+                            <Button Content="Добавить" HorizontalAlignment="Left" Margin="975,705,0,0" VerticalAlignment="Top" Height="35" Width="180" FontSize="24" Click="Button_Click_14"/>
+                            <Button Content="Изменить" HorizontalAlignment="Left" Margin="975,750,0,0" VerticalAlignment="Top" Height="35" Width="180" FontSize="24" Click="Button_Click_15"/>
+                            <Button Content="Удалить" HorizontalAlignment="Left" Margin="975,793,0,0" VerticalAlignment="Top" Height="35" Width="180" FontSize="24" Click="Button_Click_16"/>
+                        </Grid>
+                    </TabItem>
+
+                    <TabItem Loaded="TabItem_Loaded_4" Header="Состояние" FontWeight="Bold" Height="20" VerticalAlignment="Bottom">
+                        <Grid>
+                            <TextBlock Height="30" TextWrapping="Wrap" Width="112" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20"><Run Language="ru-ru" Text="Состояния"/></TextBlock>
+                            <DataGrid Loaded="crud_Loaded_5" Name="crud_5" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="crud_SelectionChanged_5" Height="600" VerticalAlignment="Top" HorizontalAlignment="Left" Width="600" Margin="0,30,0,0"/>
+                            <TextBlock Height="20" TextWrapping="Wrap" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="15,633,0,0"><Run Language="ru-ru" Text="Статус"/></TextBlock>
+                            <TextBox Name="Status_Condition" HorizontalAlignment="Left" Height="34" Margin="15,657,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="570" FontSize="16"/>
+                            <Button Content="Добавить" HorizontalAlignment="Left" Margin="15,707,0,0" VerticalAlignment="Top" Height="35" Width="180" FontSize="24" Click="Button_Click_17"/>
+                            <Button Content="Изменить" HorizontalAlignment="Left" Margin="210,707,0,0" VerticalAlignment="Top" Height="35" Width="180" FontSize="24" Click="Button_Click_18"/>
+                            <Button Content="Удалить" HorizontalAlignment="Left" Margin="405,707,0,0" VerticalAlignment="Top" Height="35" Width="180" FontSize="24" Click="Button_Click_19"/>
+
+                            <TextBlock Height="30" TextWrapping="Wrap" Width="104" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20" Margin="632,0,0,0"><Run Language="ru-ru" Text="Списания"/></TextBlock>
+                            <DataGrid Loaded="crud_Loaded_6" Name="crud_6" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="crud_SelectionChanged_6" Height="600" VerticalAlignment="Top" HorizontalAlignment="Left" Width="600" Margin="630,30,0,0"/>
+                            <TextBlock Height="20" TextWrapping="Wrap" Width="60" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="646,633,0,0"><Run Language="ru-ru" Text="Статус"/></TextBlock>
+                            <TextBox Name="Status_Write_downs" HorizontalAlignment="Left" Height="34" Margin="645,657,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="570" FontSize="16"/>
+                            <Button Content="Добавить" HorizontalAlignment="Left" Margin="647,711,0,0" VerticalAlignment="Top" Height="35" Width="180" FontSize="24" Click="Button_Click_20"/>
+                            <Button Content="Изменить" HorizontalAlignment="Left" Margin="840,711,0,0" VerticalAlignment="Top" Height="35" Width="180" FontSize="24" Click="Button_Click_21"/>
+                            <Button Content="Удалить" HorizontalAlignment="Left" Margin="1035,711,0,0" VerticalAlignment="Top" Height="35" Width="180" FontSize="24" Click="Button_Click_22"/>
+                        </Grid>
+                    </TabItem>
+
+                    <TabItem Loaded="TabItem_Loaded_5" Header="Роль" FontWeight="Bold" Height="20" VerticalAlignment="Bottom">
+                        <Grid>
+                            <TextBlock Height="30" TextWrapping="Wrap" Width="56" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20"><Run Language="ru-ru" Text="Роли"/></TextBlock>
+                            <DataGrid Loaded="crud_Loaded_7" Name="crud_7" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="crud_SelectionChanged_7" Height="600" VerticalAlignment="Top" HorizontalAlignment="Left" Width="600" Margin="0,30,0,0"/>
+                            <TextBlock Height="20" TextWrapping="Wrap" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="15,633,0,0"><Run Language="ru-ru" Text="Наименование"/></TextBlock>
+                            <TextBox Name="Name_Roles" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="570" FontSize="16" Margin="15,657,0,0"/>
+                            <Button Content="Добавить" HorizontalAlignment="Left" Margin="15,707,0,0" VerticalAlignment="Top" Height="35" Width="180" FontSize="24" Click="Button_Click_23"/>
+                            <Button Content="Изменить" HorizontalAlignment="Left" Margin="210,707,0,0" VerticalAlignment="Top" Height="34" Width="180" FontSize="24" Click="Button_Click_24"/>
+                            <Button Content="Удалить" HorizontalAlignment="Left" Margin="405,707,0,0" VerticalAlignment="Top" Height="35" Width="180" FontSize="24" Click="Button_Click_25"/>
+                        </Grid>
+                    </TabItem>
+                </TabControl>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
