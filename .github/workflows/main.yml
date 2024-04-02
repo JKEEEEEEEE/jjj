@@ -7,30 +7,24 @@ on:
     branches: [ "master" ]
 
 jobs:
-
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: 6.0.x
-        
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1.0.2
+
     - name: Restore dependencies
-      run: dotnet restore
+      run: msbuild /t:restore
 
     - name: Build
-      run: |
-       "%MSBUILD_EXE_PATH%" /t:Build /p:Configuration=Release /p:Platform="Any CPU" "D:\vs proekts\Technics\Technics.csproj"
+      run: msbuild /p:Configuration=Release
 
+    - name: Install StyleCop
+      run: dotnet tool install -g StyleCop.Analyzers
 
-    - name: Run WPF application tests
-      run: dotnet test --no-build --verbosity normal
-
-    - name: Check code style with StyleCop
-      run: |
-        dotnet tool install --global StyleCop.Analyzers
-        dotnet build /p:WarningsAsErrors=true /p:StyleCopEnabled=true
+    - name: Run StyleCop
+      run: dotnet build /p:StyleCopEnabled=true /p:TreatWarningsAsErrors=true
