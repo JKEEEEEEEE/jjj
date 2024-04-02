@@ -23,8 +23,8 @@ jobs:
     - name: Build
       run: msbuild /p:Configuration=Release
 
-    - name: Install StyleCop
-      run: dotnet tool install -g StyleCop.Analyzers
+    - name: Install StyleCop.Analyzers
+      run: nuget install StyleCop.Analyzers -Version <desired_version> -OutputDirectory .
 
     - name: Run StyleCop
-      run: dotnet build /p:StyleCopEnabled=true /p:TreatWarningsAsErrors=true
+      run: msbuild /p:StyleCopEnabled=true /p:TreatWarningsAsErrors=true
