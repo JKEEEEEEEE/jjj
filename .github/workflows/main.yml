@@ -15,10 +15,10 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '4.7.2' # Указываем версию .NET Framework
+        dotnet-version: 6.0.x
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
     - name: Check code style with StyleCop
-      run: dotnet build /p:TreatWarningsAsErrors=false /p:StyleCopEnabled=false # Изменяем параметр WarningsAsErrors на False
+      run: dotnet build /p:StyleCopEnabled=true /p:TreatWarningsAsErrors=true
